@@ -5,25 +5,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-/**
- * Created by jt, Spring Framework Guru.
- */
 @Entity
 public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+
+
     private String title;
-    private String isbn;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private String lastName;
 
     public String getTitle() {
         return title;
@@ -33,11 +23,11 @@ public class Book {
         this.title = title;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
